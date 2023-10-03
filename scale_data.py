@@ -40,4 +40,3 @@ def convert_date_to_float(date_str, reference_date_str='1970-01-01'):
     days_difference = (date - reference_date).days
 
     return float(days_difference)
-

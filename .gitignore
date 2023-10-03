@@ -1,4 +1,6 @@
 /data/
 /data_scaled/
+/data_sum/
+/__pycache__/
 
 .idea/
