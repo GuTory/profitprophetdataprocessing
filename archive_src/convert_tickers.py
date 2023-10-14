@@ -15,7 +15,7 @@ def save_df(df: pd.DataFrame, filename):
 
 
 def search_ticker(ticker):
-    df = pandas.read_csv(os.path.join("data", "symbols.csv"))
+    df = pandas.read_csv(os.path.join("../data", "symbols.csv"))
     return search_dataframe(df, 'Symbol', ticker)
 
 

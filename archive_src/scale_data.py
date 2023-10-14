@@ -24,7 +24,7 @@ def scale_and_write_to_file(directory, filename):
         lambda x: convert_date_to_float(x))
     print('dates converted')
     print(df.head())
-    df_ticker = pd.read_csv(os.path.join("data", "symbols.csv"))
+    df_ticker = pd.read_csv(os.path.join("../data", "symbols.csv"))
     print(df_ticker.head())
     print('applying tickers')
     df['Ticker'] = df['Ticker'].apply(

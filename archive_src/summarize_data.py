@@ -10,11 +10,11 @@ def merge_all_data(dir_stocks, dir_etfs):
     # df.to_csv(os.path.join("data_sum\\", "data.csv"), index=False)
 
     df_etf = iterate_through_directories([dir_etfs])
-    df_etf.to_csv(os.path.join("data_sum\\", "data_etf.csv"), index=False)
+    df_etf.to_csv(os.path.join("../data_sum\\", "data_etf.csv"), index=False)
     print("done with etfs.")
 
     df_stock = iterate_through_directories([dir_stocks])
-    df_stock.to_csv(os.path.join("data_sum\\", "data_stock.csv"), index=False)
+    df_stock.to_csv(os.path.join("../data_sum\\", "data_stock.csv"), index=False)
     print("done with stocks.")
 
 
