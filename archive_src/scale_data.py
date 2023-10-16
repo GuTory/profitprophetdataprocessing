@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from datetime import datetime
+import datetime as dt
 from convert_tickers import search_dataframe
 import joblib
 
@@ -53,3 +54,8 @@ def convert_date_to_float(date_str, reference_date_str='1970-01-01'):
     # Calculate the difference in days
     days_difference = (date - reference_date).days
     return float(days_difference)
+
+
+def convert_float_to_date(date_flt, reference_date_str='1970-01-01'):
+    reference_date = datetime.strptime(reference_date_str, '%Y-%m-%d')
+    return reference_date + dt.timedelta(days=date_flt)

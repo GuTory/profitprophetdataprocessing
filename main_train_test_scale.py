@@ -7,8 +7,7 @@ from datetime import datetime as dt
 def load_scaler(path):
     with open(path, 'rb') as file:
         scaler = pickle.load(file)
-        print(scaler.scale_)
-        print(scaler.min_)
+        return scaler
 
 
 def main():

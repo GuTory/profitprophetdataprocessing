@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime as dt
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
-from keras.optimizers import RMSprop
+from keras.optimizers import RMSprop, Adam, SGD
 
 
 # Logging a message with printing the current time also
@@ -20,7 +20,7 @@ def drop_close_and_split(df: pd.DataFrame):
     return X, Y
 
 
-def shift_close(df: pd.DataFrame, shift = 1):
+def shift_close(df: pd.DataFrame, shift=1):
     Y = df["Close"].shift(-shift)
     return df, Y
 
@@ -56,9 +56,11 @@ def main():
     model.add(Dense(1))
 
     # Optimizer and metrics
-    optimizer = RMSprop(0.001)
+    rmsprop = RMSprop(learning_rate=0.002, momentum=0.01)
+    adam = Adam()
+    sgd = SGD()
     metrics = ['mae', 'accuracy']
-    model.compile(loss="mean_squared_error", optimizer=optimizer, metrics=metrics)
+    model.compile(loss="mse", optimizer=adam, metrics=metrics)
     log(model.summary())
 
     # Training the model
