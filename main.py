@@ -34,7 +34,7 @@ def load_model():
 def main():
     try:
         ticker = sys.argv[0]
-        
+
     except ValueError:
         print("no parameters provided")
 

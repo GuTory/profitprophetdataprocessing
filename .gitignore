@@ -6,7 +6,7 @@
 data_scaled_sum
 data_test
 data_train
-helper
 archive_src
+venv
 
 .idea/
