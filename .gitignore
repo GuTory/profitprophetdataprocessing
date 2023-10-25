@@ -8,5 +8,6 @@ data_test
 data_train
 archive_src
 venv
+/logs/
 
 .idea/
