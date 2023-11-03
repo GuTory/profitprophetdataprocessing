@@ -3,6 +3,8 @@ Preprocessing data and creating stock market predictions with Tensorflow Keras
 
 # Directory structure
 
+As you can see in the .gitignore file, many directories have not been published to VCS, mainly because of their big size
+
 - All the csv raw data are stored in tha `.\data` folder
 - The data needs to be split into training and testing sets, I split the dataset with
 a `test_size=0.2` with scikit learn library, and turned shuffle off
