@@ -1,4 +1,4 @@
-# profit_prophet_data_processing
+# Profit Prophet Data Processing
 Preprocessing data and creating stock market predictions with Tensorflow Keras
 
 # Jupyter notebooks
